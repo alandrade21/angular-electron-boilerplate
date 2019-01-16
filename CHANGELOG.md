@@ -10,6 +10,7 @@
 * Exchange the original MIT license for the AGPL 3.
 * Moved the electron code to ./electron folder.
 * Put the compile electron code on ./dist/electron-out-tsc.
+* Added @types for electron, sqlite3
 
 
 

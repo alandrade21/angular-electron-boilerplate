@@ -17,8 +17,8 @@ Currently runs with:
 - Angular v~7.2.0
 - Electron v4.0.1
 - Electron Builder v~20.36.2
-- SQLite
-- TypeOrm
+- SQLite v^4.0.6
+- TypeOrm ^0.2.11
 
 With this sample, you can:
 
