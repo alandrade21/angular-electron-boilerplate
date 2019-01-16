@@ -25,7 +25,7 @@
     ]
   },
   "include": [
-    "main.ts",
+    "electron/main.ts",
     "src/**/*"
   ],
   "exclude": [
