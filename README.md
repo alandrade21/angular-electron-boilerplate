@@ -2,10 +2,6 @@
 
 [![License](https://img.shields.io/badge/License-AGPL--3-brightgreen.svg)](LICENSE.md)
 
-[![Watch on GitHub][github-watch-badge]][github-watch]
-[![Star on GitHub][github-star-badge]][github-star]
-[![Tweet][twitter-badge]][twitter]
-
 # Introduction
 
 This project was created based on https://github.com/maximegris/angular-electron. Some modifications were made to adapt this project to my taste. I will list this mods soon. For complete info about this boilerplate, please go to the original [project](https://github.com/maximegris/angular-electron).
@@ -18,7 +14,7 @@ Currently runs with:
 - Electron v4.0.1
 - Electron Builder v~20.36.2
 - SQLite v^4.0.6
-- TypeOrm ^0.2.11
+- TypeOrm v^0.2.11
 
 With this sample, you can:
 

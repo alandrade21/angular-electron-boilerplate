@@ -1,20 +1,23 @@
 {
-  "name": "angular-electron",
+  "name": "angular-electron-alandrade21",
   "version": "1.0.0",
-  "description": "Angular 7 with Electron (Typescript + SASS + Hot Reload)",
-  "homepage": "https://github.com/maximegris/angular-electron",
+  "description": "Angular 7 with Electron (Typescript + SASS + Hot Reload) and sqlite and typeorm",
+  "homepage": "https://github.com/alandrade21/angular-electron-boilerplate",
   "author": {
-    "name": "Maxime GRIS",
-    "email": "maxime.gris@gmail.com"
+    "name": "André Andrade",
+    "email": "alandrade21@gmail.com"
   },
   "keywords": [
     "angular",
     "angular 7",
     "electron",
     "typescript",
-    "sass"
+    "sass",
+    "sqlite",
+    "typeorm",
+    "boilerplate"
   ],
-  "main": "main.js",
+  "main": "dist/electron-out-tsc/main.js",
   "private": true,
   "scripts": {
     "postinstall": "npm run postinstall:electron && electron-builder install-app-deps",
@@ -58,7 +61,6 @@
     "@angular/router": "~7.2.0",
     "@ngx-translate/core": "11.0.1",
     "@ngx-translate/http-loader": "4.0.0",
-    "@types/electron": "^1.6.10",
     "@types/jasmine": "^2.8.7",
     "@types/jasminewd2": "^2.0.3",
     "@types/node": "^8.9.4",
