@@ -4,10 +4,7 @@
   "description": "Angular 7 with Electron (Typescript + SASS + Hot Reload) and sqlite and typeorm",
   "homepage": "https://github.com/alandrade21/angular-electron-boilerplate",
   "license": "AGPL-3.0",
-  "author": {
-    "name": "André Andrade",
-    "email": "alandrade21@gmail.com"
-  },
+  "author": "André Andrade <alandrade21@gmail.com> (https://github.com/alandrade21)",
   "keywords": [
     "angular",
     "angular 7",
