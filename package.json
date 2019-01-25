@@ -5,6 +5,12 @@
   "homepage": "https://github.com/alandrade21/angular-electron-boilerplate",
   "license": "AGPL-3.0",
   "author": "André Andrade <alandrade21@gmail.com> (https://github.com/alandrade21)",
+  "main": "dist/electron-out-tsc/main.js",
+  "private": true,
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/alandrade21/angular-electron-boilerplate.git"
+  },
   "keywords": [
     "angular",
     "angular 7",
@@ -15,8 +21,6 @@
     "typeorm",
     "boilerplate"
   ],
-  "main": "dist/electron-out-tsc/main.js",
-  "private": true,
   "scripts": {
     "postinstall": "npm run postinstall:electron && electron-builder install-app-deps",
     "postinstall:web": "node postinstall-web",
