@@ -1,5 +1,5 @@
 {
-  "name": "angular-electron-alandrade21",
+  "name": "@alandrade21/angular-electron-alandrade21",
   "version": "1.0.0",
   "description": "Angular 7 with Electron (Typescript + SASS + Hot Reload) and sqlite and typeorm",
   "homepage": "https://github.com/alandrade21/angular-electron-boilerplate",
