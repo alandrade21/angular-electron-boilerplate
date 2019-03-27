@@ -7,12 +7,22 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
-      "program": "${workspaceFolder}/dist/electron-out-tsc/main.js",
-      "preLaunchTask": "tsc: build - tsconfig.json",
+      "name": "Debug Main Process",
+      "program": "${workspaceFolder}/electron/main.ts",
+      "stopOnEntry": false,
+      "args": ["."],
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+      "runtimeArgs": [
+        "--serve", "--enable-logging"
+      ],
+      "env": {"ELECTRON_ENV": "dev"},
+      "sourceMaps": true,
       "outFiles": [
-        "${workspaceFolder}/dist/out-tsc/**/*.js"
-      ]
+        "${workspaceRoot}/electron/dist/**/*.js"
+      ],
+      "internalConsoleOptions": "openOnSessionStart",
+      "console": "integratedTerminal"
     }
   ]
 }

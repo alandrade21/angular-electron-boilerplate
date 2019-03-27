@@ -72,6 +72,10 @@ The application code is managed by `./electron/main.ts`. In this sample, the app
 The Angular component contains an example of Electron and NodeJS native lib import.
 You can disable "Developer Tools" by commenting `win.webContents.openDevTools();` in `./electron/main.ts`.
 
+## Debuging
+
+We have a launcher for debug the main proccess inside vscode. The launcher has the name `Debug Main Process` and can be found inside the vscode debug tab.
+
 ## Included Commands (based from the [original project](https://github.com/maximegris/angular-electron))
 
 |Command|Description|

@@ -12,6 +12,7 @@
 * Moved the electron code to ./electron folder.
 * Added @types for electron, sqlite3.
 * The build proccess was altered. The tsconfig-server.json was removed and a tsconfig.json was created inside the ./electron folder. The scripts in package.json were altered accordingly.
+* Create a debug launch configuration for debug main proccess with vscode.
 
 
 
