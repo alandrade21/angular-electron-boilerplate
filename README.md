@@ -24,11 +24,13 @@ With this sample, you can:
 
 ## Mods Made
 
-The main modification made on the [original project](https://github.com/maximegris/angular-electron) is the location of the electron main proccess code. This code is now located inside an `electron` folder, created on the project root. All the necessary changes were made to support this modification. The compiled electron code was put in `./dist/electron-out-tsc` instead of the root of the project.
+The main modification made on the [original project](https://github.com/maximegris/angular-electron) is the location of the electron main proccess code. This code is now located inside an `electron` folder, created on the project root. All the necessary changes were made to support this modification. The compiled electron code was put in `./electron/dist`.
+
+I also modified the build procedure according to https://malcoded.com/posts/angular-desktop-electron/. Now we have a [tsconfig.json](tsconfig.json) on the root to control Angular build, and another [tsconfig.json](electron/tsconfig.json) inside `./electron` folder, to control the build of electron code. I was having a lot of bugs in the [original project](https://github.com/maximegris/angular-electron) build way, and this isolation solved all the issues. All the build scripts were altered accordingly.
 
 I also added SQLite and TypeORM on this boiler plate.
 
-When running the app during development (usin npm strat - see the Included command section below), a node environment variable calles `ELECTRON_ENV` is created with the value `dev`, so if you want to write code that runs only in dev environment, you can test this variable. To see how this variable is created, see the `package.json` file, on the scripts section, and see the script electron:serve.
+When running the app during development (usin npm strat - see the [Included command](#included-commands-based-from-the-original-project) section below), a node environment variable called `ELECTRON_ENV` is created with the value `dev`, so if you want to write code that runs only in dev environment, you can test this variable. To see how this variable is created, see the [package.json](https://github.com/alandrade21/angular-electron-boilerplate/blob/master/package.json) file, on the scripts section, and see the script `electron:serve` or `electron:local`.
 
 Finally, I'm using the AGPL 3 license here, instead of MIT, used by the [original project](https://github.com/maximegris/angular-electron).
 
@@ -62,7 +64,7 @@ npm install -g @angular/cli
 
 ## To build for development (based on the [original project](https://github.com/maximegris/angular-electron))
 
-- **in a terminal window** -> npm start
+- **in a terminal window** -> `npm start`
 
 Voila! You can use your Angular + Electron app in a local development environment with hot reload !
 
@@ -70,19 +72,20 @@ The application code is managed by `./electron/main.ts`. In this sample, the app
 The Angular component contains an example of Electron and NodeJS native lib import.
 You can disable "Developer Tools" by commenting `win.webContents.openDevTools();` in `./electron/main.ts`.
 
-## Included Commands (copied from the [original project](https://github.com/maximegris/angular-electron))
+## Included Commands (based from the [original project](https://github.com/maximegris/angular-electron))
 
 |Command|Description|
 |--|--|
-|`npm run ng:serve:web`| Execute the app in the browser |
-|`npm run build`| Build the app. Your built files are in the /dist folder. |
-|`npm run build:prod`| Build the app with Angular aot. Your built files are in the /dist folder. |
-|`npm run electron:local`| Builds your application and start electron
+|`npm start`| Execute the app in dev environment loading Angular from `http://localhost:4200`. Changes on source are automatically reloaded |
+|`npm run start:local` | Execute the app in dev environment loading Angular from build. Changes on source are NOT automatically reloaded | 
+|`npm run ng:serve:web`| Execute the app in the browser (dev environment) |
+|`npm run build`| Build the app in dev environment. Your Angular built files are in the `/dist` folder and the electron built files are in the `/electron/dist` folder. |
+|`npm run build:prod`| Build the app in prod environment. Your Angular built files are in the `/dist` folder and the electron built files are in the `/electron/dist` folder. |
 |`npm run electron:linux`| Builds your application and creates an app consumable on linux system |
 |`npm run electron:windows`| On a Windows OS, builds your application and creates an app consumable in windows 32/64 bit systems |
 |`npm run electron:mac`|  On a MAC OS, builds your application and generates a `.app` file of your application that can be run on Mac |
 
-**Your application is optimised. Only /dist folder and node dependencies are included in the executable.**
+**Your application is optimised. Only /dist folders and node dependencies are included in the executable.**
 
 ## You want to use a specific lib (like rxjs) in electron main thread ? (based on the [original project](https://github.com/maximegris/angular-electron))
 

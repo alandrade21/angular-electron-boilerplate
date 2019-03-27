@@ -1,15 +1,18 @@
+// this file compiles the Angular part 
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./dist/electron-out-tsc",
+    "baseUrl": "./",
+    "outDir": "./dist",
     "noImplicitAny": true,
     "strictNullChecks": true,
     "sourceMap": true,
     "declaration": false,
-    "baseUrl": ".",
     "module": "commonjs",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "importHelpers": true,
     "noEmitOnError": true,
     "target": "es5",
     "typeRoots": [
@@ -22,12 +25,6 @@
       "es2015",
       "dom"
     ]
-  },
-  "include": [
-    "./electron/main.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+  }
 }
+
