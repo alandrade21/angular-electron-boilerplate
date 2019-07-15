@@ -10,9 +10,9 @@ This project bootstraps and packages your project with Angular 7 and Electron (T
 
 Currently runs with:
 
-- Angular v~7.2.0
-- Electron v4.0.1
-- Electron Builder v~20.36.2
+- Angular v~8.1.1
+- Electron v5.0.2
+- Electron Builder v~20.41.0
 - SQLite v^4.0.6
 - TypeOrm v^0.2.11
 
@@ -24,7 +24,7 @@ With this sample, you can:
 
 ## Mods Made
 
-The main modification made on the [original project](https://github.com/maximegris/angular-electron) is the location of the electron main proccess code. This code is now located inside an `electron` folder, created on the project root. All the necessary changes were made to support this modification. The compiled electron code was put in `./electron/dist`.
+The main modification made on the [original project](https://github.com/maximegris/angular-electron) is the location of the electron main process code. This code is now located inside an `electron` folder, created on the project root. All the necessary changes were made to support this modification. The compiled electron code was put in `./electron/dist`.
 
 I also modified the build procedure according to https://malcoded.com/posts/angular-desktop-electron/. Now we have a [tsconfig.json](tsconfig.json) on the root to control Angular build, and another [tsconfig.json](electron/tsconfig.json) inside `./electron` folder, to control the build of electron code. I was having a lot of bugs in the [original project](https://github.com/maximegris/angular-electron) build way, and this isolation solved all the issues. All the build scripts were altered accordingly.
 
@@ -81,7 +81,7 @@ We have a launcher for debug the main proccess inside vscode. The launcher has t
 |Command|Description|
 |--|--|
 |`npm start`| Execute the app in dev environment loading Angular from `http://localhost:4200`. Changes on source are automatically reloaded |
-|`npm run start:local` | Execute the app in dev environment loading Angular from build. Changes on source are NOT automatically reloaded | 
+|`npm run start:local` | Execute the app in dev environment loading Angular from build. Changes on source are NOT automatically reloaded |
 |`npm run ng:serve:web`| Execute the app in the browser (dev environment) |
 |`npm run build`| Build the app in dev environment. Your Angular built files are in the `/dist` folder and the electron built files are in the `/electron/dist` folder. |
 |`npm run build:prod`| Build the app in prod environment. Your Angular built files are in the `/dist` folder and the electron built files are in the `/electron/dist` folder. |
@@ -99,4 +99,3 @@ You can do this! Just by importing your library in npm dependencies (not devDepe
 
 Maybe you want to execute the application in the browser with hot reload ? You can do it with `npm run ng:serve:web`.
 Note that you can't use Electron or NodeJS native libraries in this case. Please check `providers/electron.service.ts` to watch how conditional import of electron/Native libraries is done.
-
