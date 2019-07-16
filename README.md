@@ -4,17 +4,18 @@
 
 # Introduction
 
-This project was created based on https://github.com/maximegris/angular-electron. Some modifications were made to adapt this project to my taste. I will list this mods soon. For complete info about this boilerplate, please go to the original [project](https://github.com/maximegris/angular-electron).
+This project was created based on <https://github.com/maximegris/angular-electron>. Some modifications were made to adapt this project to my taste. I will list this mods soon. For complete info about this boilerplate, please go to the original [project](https://github.com/maximegris/angular-electron).
 
-This project bootstraps and packages your project with Angular 7 and Electron (Typescript + SASS + Hot Reload) and SQLite (with TypeOrm) for creating Desktop applications.
+This project bootstraps and packages your project with Angular and Electron (Typescript + SASS + Hot Reload) and SQLite (with TypeOrm) for creating Desktop applications.
 
 Currently runs with:
 
 - Angular v~8.1.1
-- Electron v5.0.2
-- Electron Builder v~20.41.0
-- SQLite v^4.0.6
-- TypeOrm v^0.2.11
+- Electron v5.0.7
+- Electron Builder v~21.0.15
+- TypeScript V~3.4.5
+- SQLite v^4.0.9
+- TypeOrm v^0.2.18
 
 With this sample, you can:
 
@@ -24,13 +25,13 @@ With this sample, you can:
 
 ## Mods Made
 
-The main modification made on the [original project](https://github.com/maximegris/angular-electron) is the location of the electron main process code. This code is now located inside an `electron` folder, created on the project root. All the necessary changes were made to support this modification. The compiled electron code was put in `./electron/dist`.
+The main modification made on the [original project](https://github.com/maximegris/angular-electron) is the location of the electron main process code. This code is now located inside an `electron` folder, created on the project root. All the necessary changes were made to support this modification. The compiled electron code was put in `./dist/electron-out-tsc`.
 
-I also modified the build procedure according to https://malcoded.com/posts/angular-desktop-electron/. Now we have a [tsconfig.json](tsconfig.json) on the root to control Angular build, and another [tsconfig.json](electron/tsconfig.json) inside `./electron` folder, to control the build of electron code. I was having a lot of bugs in the [original project](https://github.com/maximegris/angular-electron) build way, and this isolation solved all the issues. All the build scripts were altered accordingly.
+I also modified the build procedure according to <https://malcoded.com/posts/angular-desktop-electron/>. Now the [tsconfig.json](tsconfig.json) on the root controls the Angular build, and the [tsconfig-serve.json](tsconfig-serve.json) controls the electron code build. I was having a lot of bugs in the [original project](https://github.com/maximegris/angular-electron) way of build, and this isolation solved all the issues. All the build scripts were altered accordingly.
 
 I also added SQLite and TypeORM on this boiler plate.
 
-When running the app during development (usin npm strat - see the [Included command](#included-commands-based-from-the-original-project) section below), a node environment variable called `ELECTRON_ENV` is created with the value `dev`, so if you want to write code that runs only in dev environment, you can test this variable. To see how this variable is created, see the [package.json](https://github.com/alandrade21/angular-electron-boilerplate/blob/master/package.json) file, on the scripts section, and see the script `electron:serve` or `electron:local`.
+When running the app during development (using `npm start` - see the [Included command](#included-commands-based-from-the-original-project) section below), a node environment variable called `ELECTRON_ENV` is created with the value `dev`, so if you want to write code that runs only in development environment, you can test this variable. To see how this variable is created, see the [package.json](https://github.com/alandrade21/angular-electron-boilerplate/blob/master/package.json) file, on the scripts section, and see the script `electron:serve`.
 
 Finally, I'm using the AGPL 3 license here, instead of MIT, used by the [original project](https://github.com/maximegris/angular-electron).
 
