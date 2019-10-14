@@ -1,12 +1,10 @@
 {
   "name": "@alandrade21/angular-electron-alandrade21",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "Angular 7 with Electron (Typescript + SASS + Hot Reload) and sqlite and typeorm",
   "homepage": "https://github.com/alandrade21/angular-electron-boilerplate",
   "license": "AGPL-3.0",
   "author": "André Andrade <alandrade21@gmail.com> (https://github.com/alandrade21)",
-  "main": "electron/dist/main.js",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/alandrade21/angular-electron-boilerplate.git"
@@ -21,25 +19,25 @@
     "typeorm",
     "boilerplate"
   ],
+  "main": "dist/electron-out-tsc/main.js",
+  "private": true,
   "scripts": {
     "postinstall": "npm run postinstall:electron && electron-builder install-app-deps",
     "postinstall:web": "node postinstall-web",
     "postinstall:electron": "node postinstall",
     "ng": "ng",
     "start": "npm run postinstall:electron && npm-run-all -p ng:serve electron:serve",
-    "start:local": "npm run postinstall:electron && npm-run-all ng:build:dev electron:build-tsc electron:local",
-    "build": "npm run postinstall:electron && ng:build:dev && electron:build-tsc",
-    "build:prod": "npm run postinstall:electron && ng:build:prod && electron:build-tsc",
-    "ng:build:dev": "ng build --base-href ./ -c dev",
-    "ng:build:prod": "ng build --base-href ./ -c production",
+    "build": "npm run postinstall:electron && npm run electron:serve-tsc && ng build",
+    "build:dev": "npm run build -- -c dev",
+    "build:prod": "npm run build -- -c production",
     "ng:serve": "ng serve",
     "ng:serve:web": "npm run postinstall:web && ng:serve -o",
-    "electron:build-tsc": "tsc --p electron",
-    "electron:serve": "wait-on http-get://localhost:4200/ && npm run electron:build-tsc && ELECTRON_ENV=dev electron . --serve",
-    "electron:local": "ELECTRON_ENV=dev electron .",
-    "electron:linux": "npm run postinstall:electron && ng:build:prod && electron:build-tsc && electron-builder build --linux",
-    "electron:windows": "npm run postinstall:electron && ng:build:prod && electron:build-tsc && electron-builder build --windows",
-    "electron:mac": "npm run postinstall:electron && build:prod && electron:build-tsc && electron-builder build --mac",
+    "electron:serve-tsc": "tsc -p tsconfig-serve.json",
+    "electron:serve": "wait-on http-get://localhost:4200/ && npm run electron:serve-tsc && ELECTRON_ENV=dev electron . --serve",
+    "electron:local": "npm run build:prod && electron .",
+    "electron:linux": "npm run build:prod && electron-builder build --linux",
+    "electron:windows": "npm run build:prod && electron-builder build --windows",
+    "electron:mac": "npm run build:prod && electron-builder build --mac",
     "test": "npm run postinstall:web && ng test",
     "e2e": "npm run postinstall:web && ng e2e",
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
@@ -97,6 +95,6 @@
     "zone.js": "^0.9.1"
   },
   "engines": {
-    "node": ">=10.9.0"
+    "node": ">=12.6.0"
   }
 }

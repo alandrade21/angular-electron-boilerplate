@@ -1,18 +1,22 @@
-## 1.0.2
+## 0.0.3
 
 * Electron version actualization to version 6.0.10.
 * Angular version actualization o version 8.2.8.
 * Typescript version actualization to version 3.5.3.
 * Minor actualization to use the last compatible version of various packages.
 
-## 1.0.1
+## 0.0.2
 
-* Electron version actualization to version 5.0.7.
-* Angular version actualization o version 8.1.1.
+* Angular version actualized to version 8.1.1.
+* Electron version actualized to version 5.0.7.
 * Typescript version actualization to version 3.4.5.
+* SQLite version actualized to version 4.0.9.
+* TypeORM version actualized to version 0.2.18.
 * Minor actualization to use the last compatible version of various packages.
+* The tsconfig-server.json solution was restored (removing the tsconfig.json from the ./electron folder), but the output folders were changed and the include parameters were altered.
+* The scripts on package.json were restructured.
 
-## 1.0.0
+## 0.0.1
 
 * Electron version actualization to version 4.0.1.
 * Angular version actualization o version 7.2.0.
