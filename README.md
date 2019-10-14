@@ -10,9 +10,8 @@ This project bootstraps and packages your project with Angular 7 and Electron (T
 
 Currently runs with:
 
-- Angular v~8.1.1
-- Electron v5.0.2
-- Electron Builder v~20.41.0
+- Angular v~8.2.8
+- Electron v6.0.10
 - SQLite v^4.0.6
 - TypeOrm v^0.2.11
 
