@@ -12,8 +12,8 @@ Currently runs with:
 
 - Angular v~8.2.8
 - Electron v6.0.10
-- SQLite v^4.0.6
-- TypeOrm v^0.2.11
+- SQLite v^4.1.0
+- TypeOrm v^0.2.19
 
 With this sample, you can:
 
