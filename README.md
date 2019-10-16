@@ -10,8 +10,8 @@ This project bootstraps and packages your project with Angular and Electron (Typ
 
 Currently runs with:
 
-- Angular v~8.2.8
-- Electron v6.0.10
+- Angular v~8.2.10
+- Electron v6.0.12
 - SQLite v^4.1.0
 - TypeOrm v^0.2.19
 

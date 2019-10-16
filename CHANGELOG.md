@@ -1,7 +1,7 @@
 ## 0.0.3
 
-* Electron version actualization to version 6.0.10.
-* Angular version actualization o version 8.2.8.
+* Electron version actualization to version 6.0.12.
+* Angular version actualization o version 8.2.10.
 * Typescript version actualization to version 3.5.3.
 * SQLite version actualized to version 4.1.0.
 * TypeORM version actualized to version 0.2.19.
