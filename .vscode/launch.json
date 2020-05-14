@@ -5,16 +5,19 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Debug Main Process",
       "type": "node",
       "request": "launch",
-      "name": "Debug Main Process",
-      "program": "${workspaceFolder}/electron/main.ts",
+      "protocol": "inspector",
+      // Prelaunch task compiles main.ts for Electron & starts Angular dev server.
+      "preLaunchTask": "Build.All",
+      // "program": "${workspaceFolder}/electron/main.ts",
       "stopOnEntry": false,
       "args": ["."],
       "cwd": "${workspaceRoot}",
       "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
       "runtimeArgs": [
-        "--serve", "--enable-logging"
+        "--serve", " ", "--enable-logging"
       ],
       "env": {"ELECTRON_ENV": "dev"},
       "sourceMaps": true,
