@@ -32,7 +32,6 @@
               "optimization": false,
               "outputHashing": "all",
               "sourceMap": true,
-              "extractCss": true,
               "namedChunks": false,
               "aot": false,
               "extractLicenses": true,
@@ -49,7 +48,6 @@
               "optimization": false,
               "outputHashing": "all",
               "sourceMap": true,
-              "extractCss": true,
               "namedChunks": false,
               "aot": false,
               "extractLicenses": true,
@@ -66,7 +64,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -119,21 +116,17 @@
               "src/assets"
             ],
             "customWebpackConfig": {
-              "path": "./angular.webpack.js",
-              "target": "electron-renderer"
+              "path": "./angular.webpack.js"
             }
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "eslintConfig": "src/eslintrc.config.json",
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "eslintConfig": ".eslintrc.json",
+            "lintFilePatterns": [
+              "src/**.ts",
+              "main.ts"
             ]
           }
         }
@@ -146,12 +139,9 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "eslintConfig": "e2e/eslintrc.e2e.json",
-            "tsConfig": [
-              "e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "eslintConfig": ".eslintrc.json",
+            "lintFilePatterns": [
+              "e2e/**.ts"
             ]
           }
         }
@@ -162,7 +152,7 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
-      "styleext": "scss"
+      "style": "scss"
     },
     "@schematics/angular:directive": {
       "prefix": "app"

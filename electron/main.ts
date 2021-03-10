@@ -2,11 +2,12 @@ import { app, BrowserWindow, screen } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
 
-let win: BrowserWindow|null, serve: boolean;
+let win: BrowserWindow|null = null;
+let serve: boolean;
 const args = process.argv.slice(1);
 serve = args.some(val => val === '--serve');
 
-function createWindow() {
+function createWindow(): BrowserWindow {
 
   const electronScreen = screen;
   const size = electronScreen.getPrimaryDisplay().workAreaSize;
@@ -20,12 +21,14 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       allowRunningInsecureContent: (serve) ? true : false,
+      contextIsolation: false,  // false if you want to run 2e2 test with Spectron
+      enableRemoteModule : true // true if you want to run 2e2 test  with Spectron or use remote module in renderer context (ie. Angular)
     }
   });
 
   if (serve) {
 
-    require('devtron').install();
+    //require('devtron').install();
     win.webContents.openDevTools();
 
     require('electron-reload')(__dirname, {
@@ -50,6 +53,8 @@ function createWindow() {
     // when you should delete the corresponding element.
     win = null;
   });
+
+  return win;
 
 }
 

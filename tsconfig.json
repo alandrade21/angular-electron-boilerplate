@@ -3,7 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
      /* Basic Options */
-     "module": "esnext",
+     "module": "es2020",
      "incremental": true,
      //"tsBuildInfoFile": "./",
      "target": "es5",

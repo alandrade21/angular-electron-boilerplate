@@ -5,7 +5,7 @@
     "incremental": true,
     //"tsBuildInfoFile": "./",
     "target": "es5",
-    "module": "commonjs",
+    //"module": "commonjs",
     "lib": [
       "es2018",
       "es2017",
@@ -37,6 +37,9 @@
     "baseUrl": ".",
     "typeRoots": [
       "node_modules/@types"
+    ],
+    "types": [
+      "node"
     ],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
