@@ -4,7 +4,6 @@
   "description": "Angular 11 with Electron (Typescript + SASS + Hot Reload) and sqlite and typeorm",
   "homepage": "https://github.com/alandrade21/angular-electron-boilerplate",
   "license": "AGPL-3.0",
-  
   "author": "André Andrade <alandrade21@gmail.com> (https://github.com/alandrade21)",
   "repository": {
     "type": "git",
@@ -75,16 +74,15 @@
     "@types/jasminewd2": "2.0.8",
     "@types/mocha": "8.2.0",
     "@types/node": "12.12.6",
+    "@types/sqlite3": "^3.1.5",
     "@typescript-eslint/eslint-plugin": "4.15.0",
     "@typescript-eslint/eslint-plugin-tslint": "4.15.0",
     "@typescript-eslint/parser": "4.15.0",
-
-    "@types/sqlite3": "^3.1.5",
-
     "chai": "4.2.0",
     "conventional-changelog-cli": "2.1.1",
     "core-js": "3.6.5",
     "cross-env": "7.0.3",
+    "devtron": "1.4.0",
     "electron": "11.2.0",
     "electron-builder": "22.9.1",
     "electron-reload": "1.5.0",
@@ -108,10 +106,7 @@
     "typescript": "4.0.5",
     "wait-on": "5.0.1",
     "webdriver-manager": "12.1.8",
-    "zone.js": "0.10.3",
-
-    "codelyzer": "5.2.2",
-    "devtron": "1.4.0"
+    "zone.js": "0.10.3"
   },
   "engines": {
     "node": ">=10.13.0"
