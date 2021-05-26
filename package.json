@@ -1,6 +1,6 @@
 {
   "name": "@alandrade21/angular-electron-alandrade21",
-  "version": "0.0.5",
+  "version": "0.0.4",
   "description": "Angular 11 with Electron (Typescript + SASS + Hot Reload) and sqlite and typeorm",
   "homepage": "https://github.com/alandrade21/angular-electron-boilerplate",
   "license": "AGPL-3.0",
@@ -47,8 +47,8 @@
   },
   "dependencies": {
     "reflect-metadata": "^0.1.13",
-    "sqlite3": "^4.1.0",
-    "typeorm": "^0.2.19"
+    "sqlite3": "^5.0.2",
+    "typeorm": "^0.2.32"
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "11.0.0",
@@ -74,7 +74,7 @@
     "@types/jasminewd2": "2.0.8",
     "@types/mocha": "8.2.0",
     "@types/node": "12.12.6",
-    "@types/sqlite3": "^3.1.5",
+    "@types/sqlite3": "^3.1.7",
     "@typescript-eslint/eslint-plugin": "4.15.0",
     "@typescript-eslint/eslint-plugin-tslint": "4.15.0",
     "@typescript-eslint/parser": "4.15.0",

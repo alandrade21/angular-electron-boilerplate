@@ -22,15 +22,15 @@
      //"noEmitOnError": true,
  
      /* Strict Type-Checking Options */
-     //"strict": true,
-     //"alwaysStrict": true,
-     //"strictNullChecks": true,
+     "strict": true,
+     "alwaysStrict": true,
+     "strictNullChecks": true,
      "noImplicitAny": true,
      "noImplicitThis": true,
      
      /* Additional Checks */
-     //"noUnusedLocals": true,
-     //"noUnusedParameters": true,
+     "noUnusedLocals": true,
+     "noUnusedParameters": true,
      "noImplicitReturns": true,
      "noFallthroughCasesInSwitch": true,
  

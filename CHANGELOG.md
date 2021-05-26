@@ -1,6 +1,11 @@
-## 0.0.5
-
 ## 0.0.4
+
+* Electron version actualization to version 11.2.0.
+* Angular version actualization o version 11.2.0.
+* Typescript version actualization to version 4.0.5.
+* SQLite version actualized to version 5.0.2.
+* TypeORM version actualized to version 0.2.32.
+* Minor actualization to use the last compatible version of various packages.
 
 ## 0.0.3
 

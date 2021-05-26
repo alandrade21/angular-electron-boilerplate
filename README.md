@@ -11,9 +11,9 @@ This project bootstraps and packages your project with Angular and Electron (Typ
 Currently runs with:
 
 - Angular v11.2.0
-- Electron v11.2.3
-- SQLite v^4.1.0
-- TypeOrm v^0.2.19
+- Electron v11.2.0
+- SQLite v^5.0.2
+- TypeOrm v^0.2.32
 
 With this sample, you can:
 
