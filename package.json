@@ -109,7 +109,7 @@
     "zone.js": "0.10.3"
   },
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=12.11.1"
   },
   "browserslist": [
     "chrome 83"
