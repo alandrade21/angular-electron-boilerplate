@@ -6,6 +6,7 @@
 * SQLite version actualized to version 5.0.2.
 * TypeORM version actualized to version 0.2.32.
 * Minor actualization to use the last compatible version of various packages.
+* Introduction of nvm and local versions of Angular, Electron and Type Script (instead of global ones).
 
 ## 0.0.3
 

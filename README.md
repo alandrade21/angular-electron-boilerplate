@@ -29,17 +29,21 @@ I also modified the build procedure according to <https://malcoded.com/posts/ang
 
 I also added SQLite and TypeORM on this boiler plate.
 
-When running the app during development (using `npm start` - see the [Included command](#included-commands-based-from-the-original-project) section below), a node environment variable called `ELECTRON_ENV` is created with the value `dev`, so if you want to write code that runs only in development environment, you can test this variable. To see how this variable is created, see the [package.json](https://github.com/alandrade21/angular-electron-boilerplate/blob/master/package.json) file, on the scripts section, and see the script `electron:serve`.
+Another modification is the use of local versions of Angular, Electron ans Type Script only. In other words, there is no global version installed for this components. All the pertinent scripts changes were made to support this scenario.
 
-Finally, I'm using the AGPL 3 license here, instead of MIT, used by the [original project](https://github.com/maximegris/angular-electron).
+Finally, I put a `.nvmrc` file into the project, to support the use of [nvm](https://github.com/nvm-sh/nvm) to allow various versions of node and npm installed simultaneously.
 
-For a complete list of chages, please see the file [CHANGELOG.md](CHANGELOG.md).
+If you want to learn more about more about how to use multiple node, Angular, etc. version in your environment, I recommend the article [How to run multiple Node and Angular versions simultaneously](https://levelup.gitconnected.com/how-to-run-multiple-node-and-angular-versions-simultaneously-1f58e6d150de).
+
+I'm using the AGPL 3 license here, instead of MIT, used by the [original project](https://github.com/maximegris/angular-electron).
+
+For a complete list of changes, please see the file [CHANGELOG.md](CHANGELOG.md).
 
 ## Status
 
 I'm still testing it, so, no warranties here! XD
 
-## Getting Started (copied from the [original project](https://github.com/maximegris/angular-electron))
+## Getting Started (based on the [original project](https://github.com/maximegris/angular-electron))
 
 Clone this repository locally
 
@@ -51,15 +55,7 @@ npm install
 
 There is an issue with `yarn` and `node_modules` that are only used in electron on the backend when the application is built by the packager. Please use `npm` as dependencies manager.
 
-
-If you want to generate Angular components with Angular-cli , you **MUST** install `@angular/cli` in npm global context.
-Please follow [Angular-cli documentation](https://github.com/angular/angular-cli) if you had installed a previous version of `angular-cli`.
-
-On linux, do not forget to run the following command as `sudo`.
-
-``` bash
-npm install -g @angular/cli
-```
+If you want to generate Angular components with Angular-cli , you **MUST** use nvm. Please see the article [How to run multiple Node and Angular versions simultaneously](https://levelup.gitconnected.com/how-to-run-multiple-node-and-angular-versions-simultaneously-1f58e6d150de).
 
 ## To build for development (based on the [original project](https://github.com/maximegris/angular-electron))
 
@@ -88,7 +84,7 @@ We have a launcher for debug the main proccess inside vscode. The launcher has t
 |`npm run electron:windows`| On a Windows OS, builds your application and creates an app consumable in windows 32/64 bit systems |
 |`npm run electron:mac`|  On a MAC OS, builds your application and generates a `.app` file of your application that can be run on Mac |
 
-**Your application is optimised. Only /dist folders and node dependencies are included in the executable.**
+**Your application is optimized. Only /dist folders and node dependencies are included in the executable.**
 
 ## You want to use a specific lib (like rxjs) in electron main thread ? (based on the [original project](https://github.com/maximegris/angular-electron))
 
