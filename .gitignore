@@ -32,6 +32,7 @@ src/**/*.js
 !.vscode/extensions.json
 
 # misc
+/.angular/cache
 /.sass-cache
 /connect.lock
 /coverage
@@ -45,6 +46,8 @@ package-lock.json
 /e2e/*.js
 !/e2e/protractor.conf.js
 /e2e/*.map
+/e2e/tracing
+/e2e/screenshots
 
 # System Files
 .DS_Store

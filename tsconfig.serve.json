@@ -48,7 +48,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true
   },
-  "include": [
+  "files": [
     "./electron/main.ts"
   ],
   "exclude": [
