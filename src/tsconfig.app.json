@@ -4,18 +4,18 @@
     "outDir": "../out-tsc/app",
     "module": "es2015",
     "baseUrl": "",
-    "types": []
+    "types": [
+      "node"
+    ]
   },
-  "include": [
+  "files": [
     "main.ts",
     "polyfill.ts"
   ],
+  "include": [
+    "**/*.d.ts"
+  ],
   "exclude": [
     "**/*.spec.ts"
-  ],
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true,
-    "preserveWhitespaces": true
-  }
+  ]
 }

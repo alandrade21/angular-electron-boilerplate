@@ -15,7 +15,7 @@
     ],
     "declaration": false,
     "sourceMap": true,
-    "outDir": "./dist/electron-out-tsc",
+    "outDir": "./dist/app-out-tsc",
     "importHelpers": true,
     //"noEmitOnError": true,
 
@@ -49,7 +49,7 @@
     "experimentalDecorators": true
   },
   "files": [
-    "./electron/main.ts"
+    "./app/main.ts"
   ],
   "exclude": [
     "node_modules",

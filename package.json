@@ -4,7 +4,10 @@
   "description": "Angular 13 with Electron 18 (Typescript + SASS + Hot Reload) and sqlite and typeorm",
   "homepage": "https://github.com/alandrade21/angular-electron-boilerplate",
   "license": "AGPL-3.0",
-  "author": "André Andrade <alandrade21@gmail.com> (https://github.com/alandrade21)",
+  "author": {
+    "name": "André Andrade",
+    "email": "alandrade21@gmail.com"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/alandrade21/angular-electron-boilerplate.git"
@@ -20,7 +23,7 @@
     "typeorm",
     "boilerplate"
   ],
-  "main": "dist/electron-out-tsc/main.js",
+  "main": "dist/app-out-tsc/main.js",
   "private": true,
   "scripts": {
     "postinstall": "electron-builder install-app-deps",

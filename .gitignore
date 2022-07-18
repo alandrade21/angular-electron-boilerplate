@@ -2,9 +2,10 @@
 
 # compiled output
 /dist
-/electron/dist
+/app/dist
 /tmp
 /out-tsc
+/app-out-tsc
 /app-builds
 /release
 main.js
