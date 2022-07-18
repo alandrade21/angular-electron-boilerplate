@@ -22,9 +22,9 @@
     /* Strict Type-Checking Options */
     "strict": true,
     "alwaysStrict": true,
-    "strictNullChecks": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
+    //"strictNullChecks": true,
+    //"noImplicitAny": true,
+    //"noImplicitThis": true,
 
     /* Additional Checks */
     "noUnusedLocals": true,

@@ -16,7 +16,7 @@
     "angular",
     "angular 13",
     "electron",
-		"electron 18",
+    "electron 18",
     "nodejs",
     "typescript",
     "sqlite",
@@ -27,33 +27,27 @@
   "private": true,
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
-        
     "start": "npm-run-all -p electron:serve ng:serve",
-		"ng": "ng",		
-		"ng:serve": "ng serve -c web -o",
-		
-		"electron": "electron",
+    "ng": "ng",
+    "ng:serve": "ng serve -c web -o",
+    "electron": "electron",
     "electron:serve": "wait-on tcp:4200 && npm run electron:serve-tsc && npm run electron . -- --serve",
-	  "electron:serve-tsc": "tsc -p tsconfig.serve.json",
-
+    "electron:serve-tsc": "tsc -p tsconfig.serve.json",
     "build": "npm run electron:serve-tsc && ng build --base-href ./",
     "build:dev": "npm run build -- -c dev",
     "build:prod": "npm run build -- -c production",
     "web:build": "npm run build -- -c web-production",
-    
     "electron:local": "npm run build:prod && npm run electron .",
-		"electron:build": "npm run build:prod && electron-builder build --publish=never",
-    
+    "electron:build": "npm run build:prod && electron-builder build --publish=never",
     "test": "ng test --watch=false",
     "test:watch": "ng test",
     "e2e": "npm run build:prod && playwright test -c e2e/playwright.config.ts e2e/",
     "e2e:show-trace": "playwright show-trace e2e/tracing/trace.zip",
-
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "lint": "ng lint"
   },
   "dependencies": {
-		"@angular/common": "13.3.1",
+    "@angular/common": "13.3.1",
     "@angular/compiler": "13.3.1",
     "@angular/core": "13.3.1",
     "@angular/forms": "13.3.1",
@@ -64,7 +58,6 @@
     "rxjs": "7.5.5",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.5",
-
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.2",
     "typeorm": "^0.2.32"
@@ -109,7 +102,7 @@
     "ts-node": "10.7.0",
     "typescript": "~4.5.5",
     "wait-on": "6.0.1",
-    "webdriver-manager": "12.1.8"   
+    "webdriver-manager": "12.1.8"
   },
   "engines": {
     "node": ">=14.0.0"

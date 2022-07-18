@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 import * as url from 'url';
 
-let win: BrowserWindow = null;
+let win: BrowserWindow | null = null;
 const args = process.argv.slice(1),
   serve = args.some(val => val === '--serve');
 

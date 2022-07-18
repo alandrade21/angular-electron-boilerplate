@@ -17,7 +17,7 @@ export class ElectronService {
 
   constructor() {
     // Conditional imports
-    if (this.isElectron) {
+    // if (this.isElectron) {
       this.ipcRenderer = window.require('electron').ipcRenderer;
       this.webFrame = window.require('electron').webFrame;
 
@@ -35,7 +35,7 @@ export class ElectronService {
       // If you want to use a NodeJS 3rd party deps in Renderer process,
       // ipcRenderer.invoke can serve many common use cases.
       // https://www.electronjs.org/docs/latest/api/ipc-renderer#ipcrendererinvokechannel-args
-    }
+    //}
   }
 
   get isElectron(): boolean {

@@ -10,7 +10,7 @@
   },
   "files": [
     "main.ts",
-    "polyfill.ts"
+    "polyfills.ts"
   ],
   "include": [
     "**/*.d.ts"
